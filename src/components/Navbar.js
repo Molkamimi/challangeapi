@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import Link from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
+  NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
   NavbarText,
 } from "reactstrap";
 
@@ -16,17 +22,16 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <link to="/"> Home</link>
-
+      <Navbar color="light" light expand="md" className="mr-2">
+        <Link to="/">Home</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/about us">About us</Link>
+              <Link to="/aboutus"> About us</Link>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>DrinkShop</NavbarText>
         </Collapse>
       </Navbar>
     </div>
